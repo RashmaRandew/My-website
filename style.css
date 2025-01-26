@@ -1,0 +1,1310 @@
+/* General Reset */
+body, h1, h2, p, ul, li, nav, footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #000; /* Black background */
+}
+
+/* Header */
+header {
+    background-color: #000; /* Black background */
+    padding: 0 10px;
+    height: 110px; /* Fixed height for alignment */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: space-between;
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    color: white;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-container {
+    display: flex;
+    align-items: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.logo {
+    width: 95px; /* Adjust logo size */
+    height: auto;
+    padding-left: 300px;
+    padding-right: 100px;
+    margin-left: -140px;
+}
+
+header nav ul {
+    display: flex; /* Arrange items horizontally */
+    gap: 0px; /* Consistent spacing between items */
+    list-style: none; /* Remove bullets */
+    margin: -20px;
+    padding: 0; /* Remove padding */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+header nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set link text color */
+    font-size: 18px; /* Adjust font size */
+    font-weight: bold; /* Bold the links */
+    padding: 10px 20px; /* Add padding for click area */
+    text-align: center; /* Center text */
+    padding: 10px 15px;
+    display: inline-block;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    white-space: nowrap; /* Prevent wrapping */
+    margin-top: 45px;
+}
+
+
+header nav ul li:nth-child(4) {
+    margin-left: 10px; /* Adjust this to match the gaps */
+    margin-right: 10px; /* Balance both sides */
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+.search-icon-section {
+    position: absolute;
+    right: 20px; /* Place at the far right of the header */
+    top: 10px; /* Adjust the position above the navigation bar */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 28px;
+    padding-right: 100px;
+}
+
+.search-icon {
+    width: 35px; /* Icon size */
+    height: 35px;
+    filter: invert(1); /* Make the icon white */
+}
+
+
+/* Hero Section */
+
+#hero {
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    display: block;
+    margin-bottom: 65px;
+}
+
+/* Products Section */
+#products {
+    margin: 20px 0;
+    text-align: center; /* Center align the entire section */
+}
+
+.products-container {
+    display: flex;
+    justify-content: space-around; /* Space the items evenly */
+    gap: 0px;
+    margin-top: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 25px;
+}
+
+.product {
+    text-align: center;
+    padding: 15px; /* Optional padding for spacing within the product */
+    border: none; /* Remove border */
+    background: none; /* Remove background */
+}
+
+.product img {
+    max-width: 70%; /* Ensure images are responsive */
+    border-radius: 5px; /* Optional rounded corners for images */
+}
+
+.product p {
+    margin-top: 10px;
+    color: #fff; /* Ensure text is visible on black background */
+}
+
+/* "Top Picks!" Heading */
+.top-picks-heading {
+    color: #C0C0C0; /* White text */
+    font-size: 40px; /* Larger font size */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.top-picks-heading1 {
+    color: white; /* White text */
+    font-size: 40px; /* Larger font size */
+    text-align: center; /* Center the heading */
+    margin-bottom: 80px !important; /* Add spacing below the heading */
+    margin-top: 20px;
+}
+
+/* Featured Section */
+#featured {
+    position: relative;
+    height: 300px; /* Set height for the section */
+    background: url('unleash-gaming-banner.png') no-repeat center center; /* Background image */
+    background-size: cover; /* Ensure the image covers the section */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin-top: 70px;
+    margin-bottom: 100px;
+    padding: 0; /* Remove padding */
+    width: 100%;
+}
+
+#featured .overlay-content {
+    position: absolute; /* Overlay the content on the image */
+    right: 20px; /* Align the content to the right */
+    top: 50%; /* Vertically center the content */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for text readability */
+    color: #fff; /* White text for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px; /* Limit the width of the content block */
+    text-align: center;
+}
+
+#benefits-section {
+    display: none; /* Hide the entire section */
+}
+
+#info-lists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.list-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.list-box {
+    width: 45%; /* Adjusted width for better spacing */
+    background: black;
+    padding: 20px;
+    border: none !important; /* Remove the border completely */
+    border-radius: 5px;
+    box-shadow: none; /* Remove any shadow effect */
+    max-width: 80%; /* Reduce the image width to 80% of the parent */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 0 auto; /* Center the image */
+    display: block; /* Ensure the image behaves as a block-level element */
+}
+
+
+.list-box1 {
+    width: 45%; /* Adjusted width for better spacing */
+    background: black;
+    padding: 175px;
+    border: none !important; /* Remove the border completely */
+    border-radius: 5px;
+    box-shadow: none; /* Remove any shadow effect */
+    color: white;
+}
+
+.list-box h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: white; /* Ensure the heading text remains visible */
+}
+
+.xyz {
+    padding-bottom: 30px;
+}
+
+.list-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: none; /* Remove potential border on the list */
+}
+
+.list-box ul li {
+    margin: 5px 0;
+    padding: 10px;
+    background: black;
+    border: none !important; /* Ensure all borders are removed */
+    border-radius: 3px;
+    text-align: center;
+    color: white; /* Ensure the text color is white for visibility */
+    box-shadow: none; /* Remove any shadow */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #000; /* Black background */
+}
+
+/* Products Section */
+#products {
+    margin: 20px 0;
+    text-align: center; /* Center align the entire section */
+}
+
+.products-container {
+    display: flex;
+    justify-content: space-around; /* Space the items evenly */
+    gap: 0px;
+    margin-top: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 25px;
+}
+
+.product {
+    text-align: center;
+    padding: 15px; /* Optional padding for spacing within the product */
+    border: none; /* Remove border */
+    background: none; /* Remove background */
+}
+
+.product img {
+    max-width: 70%; /* Ensure images are responsive */
+    border-radius: 5px; /* Optional rounded corners for images */
+}
+
+.product p {
+    margin-top: 10px;
+    color: #fff; /* Ensure text is visible on black background */
+}
+
+
+/* Top Banner - Button Position (Right Side) */
+#top-banner {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+/* Bottom Banner - Button Position (Left Side) */
+#bottom-banner {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+/* Bottom Banner - Button in Red Box */
+#bottom-banner .shop-now-button {
+    position: absolute;
+    top: 50%; /* Center vertically relative to the banner */
+    left: 250px; /* Move further to align with the red box */
+    transform: translateY(-50%);
+    padding: 25px 60px; /* Increased size to match the red box */
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(145deg, #e0e0e0, #000000);
+    border: 2px solid silver;
+    border-radius: 30px;
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3), 0 -2px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Top Banner - Button in Opposite Position (Right Side) */
+#top-banner .shop-now-button {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    right: 250px; /* Adjust to align on the right side */
+    transform: translateY(-50%);
+    padding: 25px 60px; /* Matching size with bottom banner */
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(145deg, #e0e0e0, #000000);
+    border: 2px solid silver;
+    border-radius: 30px;
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3), 0 -2px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for the top banner button */
+#top-banner .shop-now-button:hover {
+    background: linear-gradient(145deg, #000000, #e0e0e0); /* Change gradient direction on hover */
+    box-shadow: 0 12px 20px rgba(255, 255, 255, 0.4), 0 -4px 8px rgba(0, 0, 0, 0.6); /* Increase shadow size */
+    transform: translateY(-50%) scale(1.1); /* Slightly enlarge and keep centered */
+}
+
+/* Hover effect for the bottom banner button */
+#bottom-banner .shop-now-button:hover {
+    background: linear-gradient(145deg, #000000, #e0e0e0); /* Change gradient direction on hover */
+    box-shadow: 0 12px 20px rgba(255, 255, 255, 0.4), 0 -4px 8px rgba(0, 0, 0, 0.6); /* Increase shadow size */
+    transform: translateY(-50%) scale(1.1); /* Slightly enlarge and keep centered */
+}
+
+
+
+/* Why Choose Us Section */
+#info-lists {
+    margin: 40px 0; /* Reduced top and bottom margin */
+    padding: 10px; /* Reduced padding */
+    text-align: center; /* Center align the text */
+}
+
+#info-lists h2 {
+    font-size: 36px; /* Larger heading remains */
+    margin-bottom: 30px; /* Increased space below heading */
+    color: #fff; /* White text */
+}
+
+.list-container {
+    display: flex;
+    justify-content: space-between; /* Maintain space between columns */
+    align-items: flex-start; /* Align image and text to the top */
+    gap: 20px; /* Reduce space between columns */
+    margin-bottom: 0px; /* Reduced space between rows */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+/* Align Image and Text Properly */
+.list-box {
+    flex: 1;
+    max-width: 45%; /* Ensure equal width */
+    text-align: center; /* Center the image */
+    padding: 20px; /* Add padding to center content */
+}
+
+.list-box img {
+    max-width: 100%; /* Make image responsive */
+    border-radius: 10px; /* Add subtle rounded corners */
+    margin-bottom: 20px; /* Add space below the image */
+}
+
+/* Align Heading and Text */
+.list-box1 {
+    flex: 1;
+    max-width: 45%; /* Equal width with the image */
+    text-align: left; /* Align text to the left */
+    padding: 50px; /* Add padding to the text section */
+}
+
+.list-box1 h2 {
+    font-size: 23px !important; /* Smaller subheading */
+    margin-bottom: 20px; /* Increased spacing below subheading */
+    color: #fff; /* White for emphasis */
+}
+
+.list-box1 ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
+}
+
+.list-box1 ul li {
+    margin-bottom: 10px; /* Increased space between points */
+    padding-left: 25px; /* Indent for custom bullets */
+    position: relative; /* Relative positioning for custom bullets */
+    color: #fff; /* Ensure text is white */
+    margin-bottom: 50px;
+}
+
+.list-box1 ul li::before {
+    content: '•'; /* Custom bullet point */
+    color: #C0C0C0; /* Highlight color for bullets */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+}
+
+
+
+
+footer {
+    position: relative;
+    background-image: url('1800 300.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1;
+}
+
+footer .footer-container {
+    position: relative;
+    z-index: 2; /* Ensures the content appears above the overlay */
+}
+
+.footer-logo h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: -5px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+    color: #fff;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    filter: invert(0.8);
+    transition: transform 0.3s ease;
+    margin-top: 5px;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.2);
+    filter: invert(1);
+}
+
+.footer-copyright p {
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* fix overflow */
+
+/* General fix for horizontal scrollbar */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Ensure all elements fit within the viewport */
+* {
+    max-width: 100%;
+}
+
+#explore-us {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.explore-headingg {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 80px;
+}
+
+/* General Styling for the List */
+.explore-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 500px; /* Adjust width for consistency */
+}
+
+/* Each List Item */
+.explore-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align number, text, and icon */
+    gap: 10px; /* Adjust gap between elements */
+    color: white;
+    font-size: 18px;
+    width: 100%; /* Ensure items span the full width */
+
+}
+
+/* Number Styling */
+.number {
+    font-weight: bold;
+    font-size: 20px;
+    color: silver;
+}
+
+.explore-item .number {
+    margin-right: -100px; /* Decrease this value */
+    margin-left: -40px;
+}
+
+.explore-item .text {
+    margin-left: 0px; /* Ensure no additional spacing */
+}
+
+.explore-item img {
+    margin-left: 20px; /* Increase this value to add more space */
+}
+
+/* Text Styling */
+.text {
+    flex: 1; /* Allow text to take up available space */
+    color: white;
+    font-size: 18px;
+}
+
+/* Icon Styling */
+.explore-icon {
+    width: 20px; /* Set a fixed width for all icons */
+    height: 20px; /* Set a fixed height for all icons */
+    object-fit: contain; /* Ensure the icon fits within the box */
+    margin-left: auto; /* Push the icon to the right */
+}
+
+
+/* Images Grid */
+.explore-images {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.explore-images img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.explore-images img:hover {
+    transform: scale(1.1);
+    border-color: silver; /* Highlight on hover */
+}
+
+/* Mobile responsiveness (applies only to screens smaller than 768px) */
+@media (max-width: 768px) {
+
+/* Header */
+header {
+    background-color: #000; /* Black background */
+    padding: 0 10px;
+    height: auto; /* Adjust height automatically based on content */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Align items to the top */
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    color: white;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column; /* Stack header items vertically */
+    align-items: center; /* Center the header content */
+    width: 100%;
+}
+
+.logo {
+    width: 65px; /* Adjust logo size */
+    height: auto;
+    padding-left: 0; /* Remove left padding */
+    padding-right: 0; /* Remove right padding */
+    margin-left: 0; /* Reset any left margin */
+    margin-right: 0; /* Reset any right margin */
+    margin-bottom: -35px; /* Space between the logo and navigation */
+    margin-top: 10px;
+}
+
+/* Navigation */
+header nav ul {
+    display: flex; /* Arrange items horizontally */
+    gap: 10px; /* Add consistent spacing between items */
+    list-style: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+header nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set link text color */
+    font-size: 10px; /* Adjust font size */
+    font-weight: bold; /* Bold the links */
+    padding: 0px 0px; /* Add padding for click area */
+    text-align: center; /* Center text */
+    display: inline-block;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    white-space: nowrap; /* Prevent wrapping */
+    margin-bottom: 20px;
+}
+
+header nav ul li:nth-child(4) {
+    margin-left: 10px; /* Adjust this to match the gaps */
+    margin-right: 10px; /* Balance both sides */
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+/* Search Icon Section */
+.search-icon-section {
+    display: none;
+}
+
+/* Hero Section */
+
+#hero {
+    display: block;
+}
+
+#hero {
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    display: block;
+    margin-bottom: 50px;
+    transform: scale(1.2)
+}
+
+    /* Products Section */
+    #products {
+        margin: 20px 0;
+        text-align: center;
+        padding: 0 10px; /* Add padding for mobile */
+    }
+
+    .products-container {
+        display: flex;
+        justify-content: space-around; /* Space the items evenly */
+        gap: 100px; /* Add space between items */
+        margin-top: 50px;
+        padding-left: 20px; /* Adjust padding for mobile */
+        padding-right: 25px; /* Adjust padding for mobile */
+        padding-bottom: 25px;
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        width: 225px;
+        margin-left: -50px;
+    }
+
+    .product {
+        text-align: center;
+        padding: 15px; /* Optional padding for spacing within the product */
+        border: none; /* Remove border */
+        background: none; /* Remove background */
+        width: 100%; /* Stack products vertically on mobile */
+        margin-bottom: 20px; /* Add spacing between products */
+    }
+
+    .product img {
+        width: 100%; /* Ensure image scales to the container width */
+        max-width: 100%; /* Ensure images are responsive */
+        border-radius: 5px; /* Optional rounded corners for images */
+    }
+
+    .product p {
+        margin-top: 10px;
+        color: #fff; /* Ensure text is visible on black background */
+    }
+
+    /* "Top Picks!" Heading */
+    .top-picks-heading {
+        color: #C0C0C0; /* White text */
+        font-size: 25px !important; /* Smaller font size for mobile */
+        text-align: center; /* Center the heading */
+        margin-bottom: 10px; /* Adjust margin for mobile */
+    }
+
+    .top-picks-heading1 {
+        color: white; /* White text */
+        font-size: 25px !important; /* Smaller font size for mobile */
+        text-align: center; /* Center the heading */
+        margin-bottom: 30px; /* Adjust margin for mobile */
+    }
+
+/* Featured Section */
+#featured {
+    position: relative;
+    height: 300px; /* Set height for the section */
+    background: url('unleash-gaming-banner.png') no-repeat center center; /* Background image */
+    background-size: cover; /* Ensure the image covers the section */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin-top: 70px;
+    margin-bottom: 100px;
+    padding: 0; /* Remove padding */
+    width: 100%;
+}
+
+#featured .overlay-content {
+    position: absolute; /* Overlay the content on the image */
+    right: 20px; /* Align the content to the right */
+    top: 50%; /* Vertically center the content */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for text readability */
+    color: #fff; /* White text for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px; /* Limit the width of the content block */
+    text-align: center;
+}
+
+.shop-now {
+    margin-top: 10px; /* Add space above the button */
+    padding: 10px 20px;
+    background: #ff9800; /* Orange button */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    /* Featured Section */
+    #featured {
+        position: relative;
+        height: 250px; /* Adjusted height for mobile screens */
+        background: url('unleash-gaming-banner.png') no-repeat center center; /* Background image */
+        background-size: cover; /* Ensure the image covers the section */
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        margin-top: 40px; /* Reduced top margin for mobile */
+        margin-bottom: 60px; /* Adjusted bottom margin */
+        padding: 0; /* Remove padding */
+        width: 100%;
+    }
+
+    #featured .overlay-content {
+        position: absolute; /* Overlay the content on the image */
+        left: 10px; /* Adjust content to the left side for better mobile positioning */
+        right: 10px; /* Ensure content fits better on small screens */
+        top: 50%; /* Vertically center the content */
+        transform: translateY(-50%); /* Adjust for vertical centering */
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for text readability */
+        color: #fff; /* White text for contrast */
+        padding: 15px; /* Adjusted padding for mobile */
+        border-radius: 10px;
+        max-width: 80%; /* Ensure the overlay doesn't take up too much space */
+        text-align: center;
+    }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+    #info-lists {
+        display: none; /* Hide the entire section */
+    }
+
+    #benefits-section{
+        display: block /* Hide the entire section */
+    }
+
+    #benefits-section {
+        padding: 20px; /* Add padding around the section */
+    }
+
+    .section-title {
+        font-size: 24px; /* Reduce font size for better readability */
+        margin-bottom: 20px; /* Add space below the title */
+    }
+
+    /* Adjust feature container to stack vertically */
+    .feature-container {
+        display: flex;
+        flex-direction: column; /* Stack images and content vertically */
+        align-items: center; /* Center-align items */
+        margin-bottom: 40px; /* Space between each section */
+    }
+
+    /* Adjust images in the feature container */
+    .image-box img {
+        width: 80%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Rounded corners */
+        margin-bottom: 15px; /* Space below images */
+    }
+
+    /* Content Box Styles */
+    .content-box {
+        width: 100%; /* Take up full width */
+        text-align: center; /* Center the content */
+    }
+
+    .feature-header h3 {
+        font-size: 20px; /* Make heading size smaller for mobile */
+        margin-bottom: 10px; /* Add space below headings */
+        color: #fff; /* Ensure text is visible on dark backgrounds */
+    }
+
+    .feature-list {
+        list-style: none; /* Remove bullets */
+        padding: 0;
+        margin: 0;
+    }
+
+    .feature-list li {
+        font-size: 14px; /* Smaller font size */
+        line-height: 1.6; /* Add some space between lines */
+        color: #ccc; /* Lighter color for list text */
+        margin-bottom: 10px; /* Add spacing between list items */
+    }
+
+    /* Adjust for mobile spacing */
+    .feature-list li::before {
+        font-size: 16px; /* Smaller bullet size */
+        margin-right: 10px; /* Add space between bullet and text */
+    }
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #000; /* Black background */
+}
+
+/* Products Section */
+#products {
+    margin: 20px 0;
+    text-align: center; /* Center align the entire section */
+}
+
+.products-container {
+    display: flex;
+    justify-content: space-around; /* Space the items evenly */
+    gap: 0px;
+    margin-top: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 25px;
+}
+
+.product {
+    text-align: center;
+    padding: 15px; /* Optional padding for spacing within the product */
+    border: none; /* Remove border */
+    background: none; /* Remove background */
+}
+
+.product img {
+    max-width: 70%; /* Ensure images are responsive */
+    border-radius: 5px; /* Optional rounded corners for images */
+}
+
+.product p {
+    margin-top: 10px;
+    color: #fff; /* Ensure text is visible on black background */
+}
+
+/* "Top Picks!" Heading */
+.top-picks-heading {
+    color: #fff; /* White text */
+    font-size: 26px !important; /* Larger font size */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+/* Top Banner - Button Position (Right Side) */
+#top-banner {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 110px;
+    margin-top: -50px;
+}
+
+/* Bottom Banner - Button Position (Left Side) */
+#bottom-banner {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 110px;
+}
+
+/* Bottom Banner - Button in Red Box */
+#bottom-banner .shop-now-button {
+    position: absolute;
+    top: 50%; /* Center vertically relative to the banner */
+    left: 30px; /* Move further to align with the red box */
+    transform: translateY(-50%);
+    padding: 5px 20px; /* Increased size to match the red box */
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(145deg, #e0e0e0, #000000);
+    border: 2px solid silver;
+    border-radius: 30px;
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3), 0 -2px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Top Banner - Button in Opposite Position (Right Side) */
+#top-banner .shop-now-button {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    right: 30px; /* Adjust to align on the right side */
+    transform: translateY(-50%);
+    padding: 5px 20px; /* Matching size with bottom banner */
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(145deg, #e0e0e0, #000000);
+    border: 2px solid silver;
+    border-radius: 30px;
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3), 0 -2px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for the top banner button */
+#top-banner .shop-now-button:hover {
+    background: linear-gradient(145deg, #000000, #e0e0e0); /* Change gradient direction on hover */
+    box-shadow: 0 12px 20px rgba(255, 255, 255, 0.4), 0 -4px 8px rgba(0, 0, 0, 0.6); /* Increase shadow size */
+    transform: translateY(-50%) scale(1.1); /* Slightly enlarge and keep centered */
+}
+
+/* Hover effect for the bottom banner button */
+#bottom-banner .shop-now-button:hover {
+    background: linear-gradient(145deg, #000000, #e0e0e0); /* Change gradient direction on hover */
+    box-shadow: 0 12px 20px rgba(255, 255, 255, 0.4), 0 -4px 8px rgba(0, 0, 0, 0.6); /* Increase shadow size */
+    transform: translateY(-50%) scale(1.1); /* Slightly enlarge and keep centered */
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+    #benefits-section {
+        display: block; /* Ensure it's displayed by default */
+    }
+    
+    #benefits-section {
+        padding: 20px; /* Add padding around the section */
+    }
+    
+    .section-title {
+        font-size: 26px; /* Reduce font size for better readability */
+        margin-bottom: 20px; /* Add space below the title */
+        color: white;
+        margin-top: 25px;
+        margin-bottom: 35px;
+    }
+    
+    /* Adjust feature container to stack vertically */
+    .feature-container {
+        display: flex;
+        flex-direction: column; /* Stack images and content vertically */
+        align-items: center; /* Center-align items */
+        margin-bottom: 40px; /* Space between each section */
+    }
+    
+    /* Adjust images in the feature container */
+    .image-box img {
+        width: 80%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Rounded corners */
+        margin-bottom: 15px; /* Space below images */
+    }
+    
+    /* Content Box Styles */
+    .content-box {
+        width: 100%; /* Take up full width */
+        text-align: center; /* Center the content */
+    }
+    
+    .feature-header h3 {
+        font-size: 16px; /* Make heading size smaller for mobile */
+        margin-bottom: 20px; /* Add space below headings */
+        color: #fff; /* Ensure text is visible on dark backgrounds */
+    }
+    
+    /* Feature List with Bullet Points */
+    .feature-list {
+        list-style-type: disc; /* Default bullet point style */
+        padding-left: 20px; /* Indent the list */
+        margin: 0;
+        text-align: left;
+    }
+    
+    .feature-list li {
+        font-size: 14px; /* Smaller font size */
+        line-height: 1.6; /* Add some space between lines */
+        color: #ccc; /* Lighter color for list text */
+        margin-bottom: 10px; /* Add spacing between list items */
+        padding-left: 10px;
+    }
+    
+    /* Adjust for mobile spacing */
+    .feature-list li::before {
+        font-size: 16px; /* Bullet size */
+        margin-right: 10px; /* Add space between bullet and text */
+        position: absolute;
+        left: 0;
+    }
+    
+}
+
+
+
+footer {
+    position: relative;
+    background-image: url('1800 300.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1;
+}
+
+footer .footer-container {
+    position: relative;
+    z-index: 2; /* Ensures the content appears above the overlay */
+}
+
+.footer-logo h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: -5px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+    color: #fff;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    filter: invert(0.8);
+    transition: transform 0.3s ease;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.2);
+    filter: invert(1);
+}
+
+.footer-copyright p {
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* fix overflow */
+
+/* General fix for horizontal scrollbar */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Ensure all elements fit within the viewport */
+* {
+    max-width: 100%;
+}
+
+#explore-us {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.explore-headingg {
+    font-size: 26px;
+    color: white;
+    margin-bottom: 60px;
+}
+
+/* General Styling for the List */
+.explore-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 200px; /* Adjust width for consistency */
+    margin-left: 200px;
+}
+
+/* Each List Item */
+.explore-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align number, text, and icon */
+    gap: 10px; /* Adjust gap between elements */
+    color: white;
+    font-size: 18px;
+    width: 100%; /* Ensure items span the full width */
+
+}
+
+/* Number Styling */
+.number {
+    position: absolute; /* Position the number absolutely inside the container */
+    left: -130px; /* Move the number to the left side of the list item */
+    font-weight: bold;
+    font-size: 16px; /* Set a reasonable font size */
+    color: silver;
+    z-index: 1; /* Ensure the number stays on top of other elements */
+    margin-bottom: 25px;
+}
+
+.explore-item {
+    position: relative; /* Make the .explore-item container relative for absolute positioning */
+    padding-left: 0px; /* Add some padding on the left side to create space for the number */
+    color: white;
+    font-size: 18px;
+}
+
+.explore-item .text {
+    font-size: 15px;
+    margin-left: -100px;
+}
+
+.explore-item img {
+    margin-left: 20px; /* Adjust spacing for the image */
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Text Styling */
+.text {
+    flex: 1; /* Allow text to take up available space */
+    color: white;
+}
+
+
+
+/* Icon Styling */
+.explore-icon {
+    width: 20px; /* Set a fixed width for all icons */
+    height: 20px; /* Set a fixed height for all icons */
+    object-fit: contain; /* Ensure the icon fits within the box */
+    margin-left: auto; /* Push the icon to the right */
+}
+
+
+/* Images Grid */
+.explore-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.explore-images img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.explore-images img:hover {
+    transform: scale(1.1);
+    border-color: silver; /* Highlight on hover */
+}
+
+}

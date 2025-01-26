@@ -1,0 +1,488 @@
+
+body, h1, h2, p, ul, li, nav, footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #000;
+}
+
+
+header {
+    background-color: #000; 
+    padding: 0 10px;
+    height: 110px; 
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+    color: white;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-container {
+    display: flex;
+    align-items: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.logo {
+    width: 95px; 
+    height: auto;
+    padding-left: 300px;
+    padding-right: 100px;
+    margin-left: -140px;
+}
+
+header nav ul {
+    display: flex; 
+    gap: 0px; 
+    list-style: none;
+    margin: -20px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    padding: 10px 15px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    margin-top: 45px;
+}
+
+
+header nav ul li:nth-child(4) {
+    margin-left: 10px; 
+    margin-right: 10px;
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+.search-icon-section {
+    position: absolute;
+    right: 20px;
+    top: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 28px;
+    padding-right: 100px;
+}
+
+.search-icon {
+    width: 35px;
+    height: 35px;
+    filter: invert(1);
+}
+
+footer {
+    position: relative;
+    background-image: url('1800 300.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+footer .footer-container {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-logo h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: -5px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.footer-nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+        justify-content: center;
+}
+
+.footer-nav ul li a:hover {
+    color: #fff;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    filter: invert(0.8);
+    transition: transform 0.3s ease;
+    margin-top: 5px;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.2);
+    filter: invert(1);
+}
+
+.footer-copyright p {
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+* {
+    max-width: 100%;
+}
+
+
+header {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+
+.games-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    gap: 60px;
+    padding: 20px;
+    padding-bottom: 100px;
+    background-color: #000;
+}
+
+
+.game-card {
+    display: flex;
+    flex-direction: row;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    width: 45%;
+    padding: 15px;
+    gap: 50px;
+    color: white;
+    font-family: Arial, sans-serif;
+    border: 2px solid #666;
+}
+
+
+.game-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+    border-color: #fff;
+    background-color: #2a2a2a; 
+}
+
+
+
+.game-card img {
+    width: 140px; 
+    height: auto; 
+    border-radius: 8px; 
+    object-fit: cover; 
+    margin-left: 100px;
+}
+
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-info h3 {
+    font-size: 18px;
+    color: silver; 
+    margin-bottom: 10px;
+}
+
+.game-info p {
+    font-size: 14px;
+    color: #ccc; 
+    margin: 5px 0;
+}
+
+
+@media (max-width: 768px) {
+    .game-card {
+        width: 100%; 
+        flex-direction: column; 
+    }
+
+    .game-card img {
+        width: 100%; 
+        margin-bottom: 10px;
+    }
+}
+
+
+.games-heading {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.games-heading h2 {
+    font-size: 36px; 
+    color: white; 
+    background-color: black; 
+    padding: 10px 0; 
+    margin: 0 auto; 
+    width: 100%; 
+
+}
+
+
+.collection-heading h2 {
+    font-size: 36px;
+    background-color: black;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid silver;
+    border-radius: 10px;
+}
+
+
+.collection-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: black;
+    gap: 20px;
+}
+
+
+.item-card {
+    background-color: #1a1a1a;
+    color: white;
+    width: 25%; 
+    text-align: center;
+    padding: 15px;
+    border: 2px solid silver;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 60px;
+
+}
+
+.item-card img {
+    width: 90%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.item-card h3 {
+    font-size: 18px;
+    color: silver;
+    margin-bottom: 10px;
+}
+
+.item-card p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+
+.item-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+    border-color: white;
+}
+
+
+@media (max-width: 768px) {
+    .item-card {
+        width: 100%; 
+    }
+
+
+    header {
+        background-color: #000; 
+        padding: 0 10px;
+        height: auto; 
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: flex-start; 
+        position: sticky; 
+        top: 0; 
+        z-index: 1000; 
+        color: white;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .header-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        width: 100%;
+    }
+    
+    .logo {
+        width: 65px; 
+        height: auto;
+        padding-left: 0; 
+        padding-right: 0; 
+        margin-left: 0; 
+        margin-right: 0; 
+        margin-bottom: -35px; 
+        margin-top: 10px;
+    }
+    
+
+    header nav ul {
+        display: flex; 
+        gap: 10px; 
+        list-style: none; 
+        margin: 0;
+        padding: 0;
+        align-items: center; 
+        justify-content: center; 
+    }
+    
+    header nav ul li a {
+        text-decoration: none; 
+        color: white; 
+        font-size: 10px; 
+        font-weight: bold; 
+        padding: 0px 0px; 
+        text-align: center;
+        display: inline-block;
+        align-items: center; 
+        justify-content: center; 
+        white-space: nowrap; 
+        margin-bottom: 20px;
+    }
+    
+    header nav ul li:nth-child(4) {
+        margin-left: 10px; 
+        margin-right: 10px; 
+    }
+    
+    nav ul li a.active {
+        text-decoration: underline;
+    }
+    
+
+    .search-icon-section {
+        position: absolute;
+        right: 20px; 
+        top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .search-container {
+        display: flex;
+        align-items: center;
+        margin-left: 500px;
+    }
+    
+    .search-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding-top: 28px;
+        padding-right: 100px;
+    }
+    
+    .search-icon {
+        width: 35px;
+        height: 35px;
+        filter: invert(1); 
+    }
+    
+
+    #hero {
+        text-align: center;
+    }
+    
+    .hero-image {
+        width: 100%;
+        display: block;
+        margin-bottom: 35px;
+    }
+
+}
+
+
+
+

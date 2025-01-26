@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="faq.css">
+    <title>XLoot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<header>
+    <div class="header-container">
+        <img src="logo.png" alt="XLoot Logo" class="logo">
+        <div class="search-icon-section">
+            <div class="search-container">
+                <button class="search-button">
+                    <img src="search icon.png" alt="Search Icon" class="search-icon">
+                </button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="consoles.html">Consoles & Peripherals</a></li>
+                <li><a href="faq.html">Queries and FAQs</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <main>
+        <section id="hero">
+            <img src="faqs.png" alt="Hero Image" class="hero-image">
+        </section>
+    </main>
+
+    <section id="faq">
+        <div class="faq-container">
+            <div class="faq-item">
+                <input type="checkbox" id="faq1" class="faq-checkbox">
+                <label for="faq1" class="faq-title">
+                    <span>What is the return policy?</span>
+                    <span class="arrow">▼</span>
+                </label>
+                <div class="faq-content">
+                    <p>Our return policy allows returns within 30 days of purchase, provided the item is in its original condition.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <input type="checkbox" id="faq2" class="faq-checkbox">
+                <label for="faq2" class="faq-title">
+                    <span>How do I track my order?</span>
+                    <span class="arrow">▼</span>
+                </label>
+                <div class="faq-content">
+                    <p>You can track your order by logging into your account and viewing the order history.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <input type="checkbox" id="faq3" class="faq-checkbox">
+                <label for="faq3" class="faq-title">
+                    <span>Do you ship internationally?</span>
+                    <span class="arrow">▼</span>
+                </label>
+                <div class="faq-content">
+                    <p>Yes, we offer international shipping to select countries. Check our shipping policy for more details.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <input type="checkbox" id="faq4" class="faq-checkbox">
+                <label for="faq4" class="faq-title">
+                    <span>Can I cancel my order?</span>
+                    <span class="arrow">▼</span>
+                </label>
+                <div class="faq-content">
+                    <p>You can cancel your order within 24 hours of placing it. After this period, cancellations are not guaranteed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="query-form" class="query-section">
+        <h2 class="query-title">Reach Out to Us</h2>
+        <form class="query-form" action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group full-width">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group full-width">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Describe your issue or question..." required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit-button">Send Message</button>
+            </div>
+        </form>
+    </section>
+    
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h3>XLoot.com</h3>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="consoles.html">Consoles & Peripherals</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="faq.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="footer-social">
+                <a href="#"><img src="twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="social.png" alt="Instagram"></a>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2025 XLoot. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
