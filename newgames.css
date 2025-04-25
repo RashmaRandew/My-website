@@ -30,7 +30,6 @@ header {
 
 .header-container {
     display: flex;
-    align-items: flex;
     justify-content: flex-start;
     width: 100%;
 }
@@ -302,7 +301,7 @@ body {
 
 
 .game-card:hover .game-info {
-    opacity: 0; 
+    opacity: 1; 
     pointer-events: none; 
 }
 

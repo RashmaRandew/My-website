@@ -30,7 +30,6 @@ header {
 
 .header-container {
     display: flex;
-    align-items: flex;
     justify-content: flex-start;
     width: 100%;
 }
@@ -68,11 +67,6 @@ header nav ul li a {
     margin-top: 45px;
 }
 
-
-header nav ul li:nth-child(4) {
-    margin-left: 10px; 
-    margin-right: 10px;
-}
 
 nav ul li a.active {
     text-decoration: underline;
@@ -431,14 +425,6 @@ body {
         margin-bottom: 20px;
     }
     
-    header nav ul li:nth-child(4) {
-        margin-left: 10px; 
-        margin-right: 10px; 
-    }
-    
-    nav ul li a.active {
-        text-decoration: underline;
-    }
     
 
     .search-icon-section {

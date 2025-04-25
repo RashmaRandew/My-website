@@ -30,7 +30,6 @@ header {
 
 .header-container {
     display: flex;
-    align-items: flex;
     justify-content: flex-start;
     width: 100%;
 }
@@ -386,6 +385,7 @@ header {
         padding: 0;
         align-items: center; 
         justify-content: center; 
+    }
     
     header nav ul li a {
         text-decoration: none; 
@@ -451,5 +451,5 @@ header {
         margin-bottom: 35px;
     }
 
-    }
+    
 }

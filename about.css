@@ -30,7 +30,6 @@ header {
 
 .header-container {
     display: flex;
-    align-items: flex;
     justify-content: flex-start;
     width: 100%;
 }
