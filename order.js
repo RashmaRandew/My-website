@@ -1,55 +1,49 @@
-// ------------------------------
-// Product Data (Organized by Categories)
-// ------------------------------
+// Product data
 const products = {
     processors: [
-        { id: 'p1', name: 'AMD Ryzen 9 5950X', price: 799.99, image: 'https://th.bing.com/th/id/OIP.cMtShwl8EHnKLYHKm1D2sQHaHa?rs=1&pid=ImgDetMain' },
-        { id: 'p2', name: 'Intel Core i9-12900K', price: 589.99, image: 'https://th.bing.com/th/id/OIP.KC6JArBsxZEMbq272Xa2KwHaHa?w=187&h=187&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 'p3', name: 'AMD Ryzen 7 5800X', price: 449.99, image: 'https://th.bing.com/th/id/OIP.d_eJe13ciMK6qIpbhVSp-wHaHa?w=163&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 'p4', name: 'Intel Core i7-12700K', price: 409.99, image: 'https://th.bing.com/th/id/OIP.mBZAIATkLp92R7TGBB3AzgHaHa?w=161&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 'p5', name: 'AMD Ryzen 5 5600X', price: 299.99, image: 'https://th.bing.com/th/id/OIP.9eNH_bEpi2DN8aB7S-1vIAHaFj?w=243&h=182&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 'p6', name: 'Intel Core i5-12600K', price: 279.99, image: 'https://th.bing.com/th/id/OIP.oFJZszmCWIPxgGRHUGNAeQHaIV?w=173&h=195&c=7&r=0&o=5&dpr=1.1&pid=1.7' }
+        { id: 'p1', name: 'AMD Ryzen 9 5950X', price: 799.99, image: 'images/products/ryzen9.jpg' },
+        { id: 'p2', name: 'Intel Core i9-12900K', price: 589.99, image: 'images/products/i9.jpg' },
+        { id: 'p3', name: 'AMD Ryzen 7 5800X', price: 449.99, image: 'images/products/ryzen7.jpg' },
+        { id: 'p4', name: 'Intel Core i7-12700K', price: 409.99, image: 'images/products/i7.jpg' },
+        { id: 'p5', name: 'AMD Ryzen 5 5600X', price: 299.99, image: 'images/products/ryzen5.jpg' },
+        { id: 'p6', name: 'Intel Core i5-12600K', price: 279.99, image: 'images/products/i5.jpg' }
     ],
     graphicsCards: [
-        { id: 'g1', name: 'NVIDIA RTX 4090', price: 1599.99, image: 'https://th.bing.com/th/id/OIP.vFH7IN1TrJT6H-qArbc5ywHaEK?w=317&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 'g2', name: 'AMD RX 7900 XTX', price: 999.99, image: 'https://th.bing.com/th/id/OIP.vFH7IN1TrJT6H-qArbc5ywHaEK?w=317&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 'g3', name: 'NVIDIA RTX 4080', price: 1199.99, image: 'https://th.bing.com/th/id/OIP.vFH7IN1TrJT6H-qArbc5ywHaEK?w=317&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 'g4', name: 'AMD RX 7800 XT', price: 649.99, image: 'https://th.bing.com/th/id/OIP.vFH7IN1TrJT6H-qArbc5ywHaEK?w=317&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 'g5', name: 'NVIDIA RTX 4070', price: 599.99, image: 'https://th.bing.com/th/id/OIP.vFH7IN1TrJT6H-qArbc5ywHaEK?w=317&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 'g6', name: 'AMD RX 7700 XT', price: 449.99, image: 'https://th.bing.com/th/id/OIP.vFH7IN1TrJT6H-qArbc5ywHaEK?w=317&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7' }
+        { id: 'g1', name: 'NVIDIA RTX 4090', price: 1599.99, image: 'images/products/rtx4090.jpg' },
+        { id: 'g2', name: 'AMD RX 7900 XTX', price: 999.99, image: 'images/products/rx7900.jpg' },
+        { id: 'g3', name: 'NVIDIA RTX 4080', price: 1199.99, image: 'images/products/rtx4080.jpg' },
+        { id: 'g4', name: 'AMD RX 7800 XT', price: 649.99, image: 'images/products/rx7800.jpg' },
+        { id: 'g5', name: 'NVIDIA RTX 4070', price: 599.99, image: 'images/products/rtx4070.jpg' },
+        { id: 'g6', name: 'AMD RX 7700 XT', price: 449.99, image: 'images/products/rx7700.jpg' }
     ],
     motherboards: [
-        { id: 'm1', name: 'ASUS ROG X570', price: 299.99, image: 'https://th.bing.com/th/id/OIP.hAZVSzowlUuE4cHzLn4QZAHaHa?w=181&h=182&c=7&r=0&o=5&dpr=1.1&pid=1.7g' },
-        { id: 'm2', name: 'MSI MPG B550', price: 179.99, image: 'https://th.bing.com/th/id/OIP.hAZVSzowlUuE4cHzLn4QZAHaHa?w=181&h=182&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 'm3', name: 'GIGABYTE Z690', price: 249.99, image: 'https://th.bing.com/th/id/OIP.hAZVSzowlUuE4cHzLn4QZAHaHa?w=181&h=182&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 'm4', name: 'ASRock B660', price: 149.99, image: 'https://th.bing.com/th/id/OIP.hAZVSzowlUuE4cHzLn4QZAHaHa?w=181&h=182&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 'm5', name: 'ASUS PRIME H610', price: 119.99, image: 'https://th.bing.com/th/id/OIP.hAZVSzowlUuE4cHzLn4QZAHaHa?w=181&h=182&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 'm6', name: 'MSI PRO Z790', price: 329.99, image: 'https://th.bing.com/th/id/OIP.hAZVSzowlUuE4cHzLn4QZAHaHa?w=181&h=182&c=7&r=0&o=5&dpr=1.1&pid=1.7' }
+        { id: 'm1', name: 'ASUS ROG X570', price: 299.99, image: 'images/products/asus-x570.jpg' },
+        { id: 'm2', name: 'MSI MPG B550', price: 179.99, image: 'images/products/msi-b550.jpg' },
+        { id: 'm3', name: 'GIGABYTE Z690', price: 249.99, image: 'images/products/gigabyte-z690.jpg' },
+        { id: 'm4', name: 'ASRock B660', price: 149.99, image: 'images/products/asrock-b660.jpg' },
+        { id: 'm5', name: 'ASUS PRIME H610', price: 119.99, image: 'images/products/asus-h610.jpg' },
+        { id: 'm6', name: 'MSI PRO Z790', price: 329.99, image: 'images/products/msi-z790.jpg' }
     ],
     memory: [
-        { id: 'r1', name: 'Corsair 32GB DDR4', price: 129.99, image: 'https://th.bing.com/th/id/OIP.gsy8pjx4_Isn3tIXP6dZEgHaH6?w=177&h=189&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 'r2', name: 'G.SKILL 16GB DDR4', price: 79.99, image: 'https://th.bing.com/th/id/OIP.gsy8pjx4_Isn3tIXP6dZEgHaH6?w=177&h=189&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 'r3', name: 'Crucial 64GB DDR5', price: 299.99, image: 'https://th.bing.com/th/id/OIP.gsy8pjx4_Isn3tIXP6dZEgHaH6?w=177&h=189&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 'r4', name: 'Kingston 32GB DDR5', price: 159.99, image: 'https://th.bing.com/th/id/OIP.gsy8pjx4_Isn3tIXP6dZEgHaH6?w=177&h=189&c=7&r=0&o=5&dpr=1.1&pid=1.7' }
+        { id: 'r1', name: 'Corsair 32GB DDR4', price: 129.99, image: 'images/products/corsair-32.jpg' },
+        { id: 'r2', name: 'G.SKILL 16GB DDR4', price: 79.99, image: 'images/products/gskill-16.jpg' },
+        { id: 'r3', name: 'Crucial 64GB DDR5', price: 299.99, image: 'images/products/crucial-64.jpg' },
+        { id: 'r4', name: 'Kingston 32GB DDR5', price: 159.99, image: 'images/products/kingston-32.jpg' }
     ],
     storage: [
-        { id: 's1', name: 'Samsung 970 EVO 1TB', price: 99.99, image: 'https://th.bing.com/th/id/OIP.rJcBTbZYf5sisvsd4O3AJQHaE8?w=253&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 's2', name: 'WD Black 2TB', price: 229.99, image: 'https://th.bing.com/th/id/OIP.rJcBTbZYf5sisvsd4O3AJQHaE8?w=253&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 's3', name: 'Crucial P5 2TB', price: 179.99, image: 'https://th.bing.com/th/id/OIP.rJcBTbZYf5sisvsd4O3AJQHaE8?w=253&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 's4', name: 'Seagate 4TB HDD', price: 89.99, image: 'https://th.bing.com/th/id/OIP.rJcBTbZYf5sisvsd4O3AJQHaE8?w=253&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 's5', name: 'Samsung 980 PRO 2TB', price: 249.99, image: 'https://th.bing.com/th/id/OIP.rJcBTbZYf5sisvsd4O3AJQHaE8?w=253&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7' },
-        { id: 's6', name: 'WD Blue 1TB SSD', price: 79.99, image: 'https://th.bing.com/th/id/OIP.rJcBTbZYf5sisvsd4O3AJQHaE8?w=253&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7' }
+        { id: 's1', name: 'Samsung 970 EVO 1TB', price: 99.99, image: 'images/products/samsung-970.jpg' },
+        { id: 's2', name: 'WD Black 2TB', price: 229.99, image: 'images/products/wd-black.jpg' },
+        { id: 's3', name: 'Crucial P5 2TB', price: 179.99, image: 'images/products/crucial-p5.jpg' },
+        { id: 's4', name: 'Seagate 4TB HDD', price: 89.99, image: 'images/products/seagate-4tb.jpg' },
+        { id: 's5', name: 'Samsung 980 PRO 2TB', price: 249.99, image: 'images/products/samsung-980.jpg' },
+        { id: 's6', name: 'WD Blue 1TB SSD', price: 79.99, image: 'images/products/wd-blue.jpg' }
     ]
 };
 
-// ------------------------------
-// Shopping Cart (in-memory array)
-// ------------------------------
-let cart = []; // Stores cart items with id, name, price, quantity
+// Shopping cart
+let cart = [];
 
-// ------------------------------
-// Creates a product card using a template literal
-// ------------------------------
+// Create product card
 function createProductCard(product) {
     return `
         <div class="col">
@@ -68,43 +62,35 @@ function createProductCard(product) {
     `;
 }
 
-// ------------------------------
-// Loads all products into the HTML
-// ------------------------------
+// Initialize product sections
 function initializeProducts() {
-    // Loop through each category (e.g., processors, graphicsCards)
     for (const [category, items] of Object.entries(products)) {
-        const container = document.getElementById(category); // get container div for category
+        const container = document.getElementById(category);
         if (container) {
-            // For each item, create a card and insert into DOM
             container.innerHTML = items.map(product => createProductCard(product)).join('');
         }
     }
 }
 
-// ------------------------------
-// Find a product by its ID in all categories
-// ------------------------------
+// Find product by ID
 function findProduct(id) {
     for (const category of Object.values(products)) {
         const product = category.find(p => p.id === id);
         if (product) return product;
     }
-    return null; // if product not found
+    return null;
 }
 
-// ------------------------------
-// Add item to cart, or update quantity if it already exists
-// ------------------------------
+// Add to cart
 function addToCart(productId) {
-    const product = findProduct(productId); // get product details
-    const quantity = parseInt(document.getElementById(`qty-${productId}`).value); // get selected quantity
-
+    const product = findProduct(productId);
+    const quantity = parseInt(document.getElementById(`qty-${productId}`).value);
+    
     if (product && quantity > 0) {
-        const existingItem = cart.find(item => item.id === productId); // check if product already in cart
-
+        const existingItem = cart.find(item => item.id === productId);
+        
         if (existingItem) {
-            existingItem.quantity += quantity; // update quantity
+            existingItem.quantity += quantity;
         } else {
             cart.push({
                 id: productId,
@@ -113,18 +99,14 @@ function addToCart(productId) {
                 quantity: quantity
             });
         }
-
-        updateCartTable(); // refresh cart table
+        
+        updateCartTable();
     }
 }
 
-// ------------------------------
-// Update cart table in the UI
-// ------------------------------
+// Update cart table
 function updateCartTable() {
-    const tbody = document.getElementById('cartBody'); // tbody in the cart table
-
-    // Replace table rows with current cart items
+    const tbody = document.getElementById('cartBody');
     tbody.innerHTML = cart.map(item => `
         <tr>
             <td>${item.name}</td>
@@ -137,63 +119,48 @@ function updateCartTable() {
         </tr>
     `).join('');
 
-    // Calculate total amount
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     document.getElementById('grandTotal').textContent = `$${total.toFixed(2)}`;
 }
 
-// ------------------------------
-// Remove a product from the cart by ID
-// ------------------------------
+// Remove from cart
 function removeFromCart(productId) {
-    cart = cart.filter(item => item.id !== productId); // keep all items except the one to remove
-    updateCartTable(); // refresh table
+    cart = cart.filter(item => item.id !== productId);
+    updateCartTable();
 }
 
-// ------------------------------
-// Save current cart to localStorage as 'favoriteOrder'
-// ------------------------------
+// Save to favorites
 function saveToFavorites() {
-    localStorage.setItem('favoriteOrder', JSON.stringify(cart)); // convert array to JSON string
+    localStorage.setItem('favoriteOrder', JSON.stringify(cart));
     alert('Order saved to favorites!');
 }
 
-// ------------------------------
-// Load favorite order from localStorage and apply to cart
-// ------------------------------
+// Apply favorites
 function applyFavorites() {
-    const favoriteOrder = localStorage.getItem('favoriteOrder'); // get JSON string
-
+    const favoriteOrder = localStorage.getItem('favoriteOrder');
     if (favoriteOrder) {
-        cart = JSON.parse(favoriteOrder); // convert string back to array
-        updateCartTable(); // show it in the table
+        cart = JSON.parse(favoriteOrder);
+        updateCartTable();
     } else {
         alert('No favorite order found!');
     }
 }
 
-// ------------------------------
-// Save cart to localStorage and go to checkout page
-// ------------------------------
+// Buy now
 function buyNow() {
     if (cart.length === 0) {
         alert('Please add items to your cart first!');
         return;
     }
-
-    localStorage.setItem('currentOrder', JSON.stringify(cart)); // store cart in localStorage
-    window.location.href = 'checkout.html'; // go to checkout page
+    
+    localStorage.setItem('currentOrder', JSON.stringify(cart));
+    window.location.href = 'checkout.html';
 }
 
-
-
-// ------------------------------
-// Run when page loads
-// ------------------------------
+// Initialize page
 document.addEventListener('DOMContentLoaded', () => {
-    initializeProducts(); // show all products
-
-    // Add click handlers to buttons
+    initializeProducts();
+    
     document.getElementById('addToFavorites').addEventListener('click', saveToFavorites);
     document.getElementById('applyFavorites').addEventListener('click', applyFavorites);
     document.getElementById('buyNow').addEventListener('click', buyNow);
