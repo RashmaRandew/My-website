@@ -219,7 +219,7 @@ button {
     color: #fff !important;
     border-radius: 10px !important;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1) !important;
-    width: 200px !important;
+    width: 350px !important;
     padding: 20px !important;
     text-align: center !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
@@ -434,3 +434,4 @@ footer .footer-container {
     }
 
 }
+
