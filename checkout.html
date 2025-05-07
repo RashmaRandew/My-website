@@ -1,167 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XLoot</title>
-    <link rel="stylesheet" href="checkout.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+// Wait for the DOM (HTML elements) to be fully loaded before running this script
+document.addEventListener('DOMContentLoaded', () => {
 
-<body>
+    // Load the current order from localStorage
+    // If nothing is stored yet, default to an empty array
+    const currentOrder = JSON.parse(localStorage.getItem('currentOrder') || '[]');
+    
+    // Get references to the order summary container and total amount element
+    const orderSummary = document.getElementById('orderSummary');
+    const totalAmount = document.getElementById('totalAmount');
+    
+    // Initialize total to calculate the total price of the order
+    let total = 0;
 
-    <header>
-        <div class="header-container">
-            <img src="logo.webp" alt="XLoot Logo" class="logo">
-            <div class="search-icon-section">
-                <div class="search-container">
-                    <button class="search-button">
-                        <img src="search_icon.webp" alt="Search Icon" class="search-icon">
-                    </button>
-                </div>
+    // Generate HTML for each product in the order and calculate total
+    orderSummary.innerHTML = currentOrder.map(item => {
+        const itemTotal = item.price * item.quantity; // total for this item
+        total += itemTotal; // add to total amount
+        return `
+            <div class="d-flex justify-content-between mb-2">
+                <span>${item.name} x ${item.quantity}</span>
+                <span>$${itemTotal.toFixed(2)}</span>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="games.html">Games</a></li>
-                    <li><a href="consoles.html">Consoles & Peripherals</a></li>
-                    <li><a href="faq.html">Queries and FAQs</a></li>
-                    <li><a href="order.html">Order</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        `;
+    }).join(''); // join the array into a single string of HTML
 
-    <div class="container mt-5">
-        <h1 class="text-center mb-5">Checkout</h1>
+    // Display the total amount to the user
+    totalAmount.textContent = `$${total.toFixed(2)}`;
 
-        <!-- Order Summary -->
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-header">
-                        <h3>Order Summary</h3>
-                    </div>
-                    <div class="card-body">
-                        <div id="orderSummary"></div>
-                        <hr>
-                        <div class="d-flex justify-content-between">
-                            <strong>Total:</strong>
-                            <span id="totalAmount">$0.00</span>
-                        </div>
-                    </div>
-                </div>
+    // Select the checkout form from the page
+    const form = document.getElementById('checkoutForm');
+    
+    // Listen for form submission event
+    form.addEventListener('submit', (e) => {
+        e.preventDefault(); // prevent default form submission (page reload)
+
+        // Check if form fields are valid using built-in HTML validation
+        if (!form.checkValidity()) {
+            e.stopPropagation(); // stop the event from bubbling further
+            form.classList.add('was-validated'); // show validation feedback styles
+            return; // stop execution if form is invalid
+        }
+
+        // --- If the form is valid ---
+
+        // Create a new Date object representing today's date
+        const deliveryDate = new Date();
+
+        // Add 3 days to simulate a 3-business-day delivery estimate
+        deliveryDate.setDate(deliveryDate.getDate() + 3);
+
+        // Format the delivery date to show as "Monday, January 1, 2025"
+        const formattedDate = deliveryDate.toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        // Prepare the success message HTML with delivery date included
+        const successMessage = `
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Thank you for your purchase!</h4>
+                <p>Your order has been successfully processed.</p>
+                <hr>
+                <p class="mb-0">Expected delivery date: ${formattedDate}</p>
             </div>
+        `;
 
-            <div class="col-md-8">
-                <form id="checkoutForm" class="needs-validation" novalidate>
-                    <!-- Personal Details -->
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <h3>Personal Details</h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label for="firstName" class="form-label">First Name</label>
-                                    <input type="text" class="form-control" id="firstName" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="lastName" class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" id="lastName" required>
-                                </div>
-                                <div class="col-12">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required>
-                                </div>
-                                <div class="col-12">
-                                    <label for="phone" class="form-label">Phone</label>
-                                    <input type="tel" class="form-control" id="phone" required>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        // Replace the entire form container with the success message
+        const container = document.querySelector('.container');
+        container.innerHTML = successMessage;
 
-                    <!-- Delivery Details -->
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <h3>Delivery Details</h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <label for="address" class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="address" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="city" class="form-label">City</label>
-                                    <input type="text" class="form-control" id="city" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="postalCode" class="form-label">Postal Code</label>
-                                    <input type="text" class="form-control" id="postalCode" required>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Payment Information -->
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <h3>Payment Information</h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <label for="cardNumber" class="form-label">Card Number</label>
-                                    <input type="text" class="form-control" id="cardNumber" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="expiryDate" class="form-label">Expiry Date</label>
-                                    <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="cvv" class="form-label">CVV</label>
-                                    <input type="text" class="form-control" id="cvv" required>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-primary btn-lg">Pay Now</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/checkout.js"></script>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-                <h3>XLoot.com</h3>
-            </div>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="consoles.html">Consoles & Peripherals</a></li>
-                    <li><a href="games.html">Games</a></li>
-                    <li><a href="faq.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="footer-social">
-                <a href="#"><img src="twitter.webp" alt="Twitter"></a>
-                <a href="#"><img src="facebook.webp" alt="Facebook"></a>
-                <a href="#"><img src="social.webp" alt="Instagram"></a>
-            </div>
-            <div class="footer-copyright">
-                <p>© 2025 XLoot. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+        // Clear the cart from localStorage so user can start fresh next time
+        localStorage.removeItem('currentOrder');
+    });
+});
